@@ -1,0 +1,185 @@
+
+/* =================================
+   EDIT MASTER PRO - MOBILE UPDATE
+   ANDROID + PHONE RESPONSIVE
+================================= */
+
+/* Плавная адаптация */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-padding-top: 90px;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+/* Картинки и видео */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Телефоны */
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 16px 5%;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 80px 6%;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 10vw, 58px);
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 15px 22px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .tutorial {
+        padding: 22px;
+    }
+
+    .tutorial h3 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .tutorial ol {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .demo {
+        padding: 20px;
+    }
+
+    .shake-box,
+    .water {
+        height: 140px;
+        font-size: 24px;
+    }
+
+    footer {
+        padding: 30px 6%;
+    }
+}
+
+/* Маленькие телефоны */
+@media screen and (max-width: 380px) {
+
+    .logo {
+        font-size: 16px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .tutorial {
+        padding: 17px;
+    }
+}
+
+/* Планшеты */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 90px 7%;
+    }
+}
+
+/* Удобные нажатия пальцем */
+a, button {
+    touch-action: manipulation;
+}
+
+.btn {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Учитываем вырезы экрана */
+@supports (padding: env(safe-area-inset-bottom)) {
+    footer {
+        padding-bottom: calc(30px + env(safe-area-inset-bottom));
+    }
+}
+
+/* Уменьшаем движение по настройкам пользователя */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
